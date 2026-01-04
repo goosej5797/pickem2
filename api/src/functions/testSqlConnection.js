@@ -7,7 +7,7 @@ app.http('testSqlConnection', {
     handler: async (request, context) => {
         context.log('Testing SQL Server connection...');
 
-        const connectionString = process.env.sql_conn_string;
+        const connectionString = process.env.SQLCONNSTR_sql_conn_string;
 
         if (!connectionString) {
             context.log('Connection string not found');
